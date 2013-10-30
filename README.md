@@ -9,9 +9,9 @@ anlredirect.html?ai=trackingid&pn=pagename&ti=title&tg=http://www.google.com?par
 
 
 Parameters:
-ai = Analytics Trackng ID
-pn = Pagename used in google analaytics
-ti = title used to identify the target page in Analytics
+id = Analytics Trackng ID
+pn = Pagename used in google analaytics (optional)
+ti = title used to identify the target page in Analytics (optional)
 tg = target url user is redirected to after pageview has been tracked. To use get parameters &tg=... MUST BE THE LAST PARAMETER!
 
 If your tracking code for Google analytics is:
@@ -27,12 +27,14 @@ If your tracking code for Google analytics is:
 </script>
 
 you need to use:
-ai=UA-43351596
-anlredirect.html?ai=UA-43351596-1&pn=bluesoybean.herokuapp.com
+id=UA-43351596
+anlredirect.html?id=UA-43351596-1&pn=bluesoybean.herokuapp.com
 
 
 Theres a hosted version available under:
 https://s3-eu-west-1.amazonaws.com/analyticsredirect/fbanlredirect.html
+
+https://s3-eu-west-1.amazonaws.com/analyticsredirect/fbanlredirect.html?id=UA-43351096-1&ti=title&tg=http://www.google.com
 
 
 

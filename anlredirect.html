@@ -27,14 +27,30 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     
 track = getParameterByName('id');
-target = window.location.href.split( "&t=")[1];
 pn = getParameterByName('pn');
+target = window.location.href.split( "&tg=")[1];
 title = getParameterByName('ti');
 
-ga('create', track, pn);
-ga('send', 'pageview', {'page': target, 'title': title });
+console.log('analytics id: ' + track + ' pn: ' + pn + ' target: ' + target + ' title: ' + title);
 
-window.location.href = target;
+if ((typeof pn === "undefined") == true ) {
+    ga('create', track, pn);
+}
+else {
+    ga('create', track);
+}
+
+if ((typeof title === "undefined") == true ) {
+    ga('send', 'pageview', {'page': target });
+} else {
+    ga('send', 'pageview', {'page': target, 'title': title });
+}
+
+if ((typeof target === "undefined") == true ) {
+    console.log('no target!')
+} else {
+    window.location.href = target;
+}
 
 </script>
 </body>
