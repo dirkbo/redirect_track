@@ -31,5 +31,9 @@ ai=UA-43351596
 anlredirect.html?ai=UA-43351596-1&pn=bluesoybean.herokuapp.com
 
 
+Theres a hosted version available under:
+https://s3-eu-west-1.amazonaws.com/analyticsredirect/fbanlredirect.html
+
+
 
 
